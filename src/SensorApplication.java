@@ -11,22 +11,23 @@ public class SensorApplication extends JFrame {
 	public SensorApplication() {
 	    // Initialize sensors
         Sensor temp = new TemperatureSensorAdapter();
-		Sensor press = new PressureSensorAdapter();
-		Sensor rad = new RadiationSensorAdapter();
-		Sensor[] sensorList = {press, rad, temp};
+        Sensor press = new PressureSensorAdapter();
+        Sensor rad = new RadiationSensorAdapter();
+        Sensor[] sensorList = {press, rad, temp};
 
-		// Display readings and status bars for each sensor
-		display(sensorList);
+        // Display readings and status bars for each sensor
+        display(sensorList);
 	}
 
 	public static void main(String[] args) {
 	    SensorApplication app = new SensorApplication();
 	}
 
-    // Displays readings for each sensor in separate panels
+	// Displays readings for each sensor in separate panels
 	public void display(Sensor[] list) {
         setTitle("Sensor Tracker");
         setLayout(new GridLayout(3,1));
+        
         // Loop through list of sensors
         for (Sensor s : list) {
             JPanel pnl = new JPanel();
