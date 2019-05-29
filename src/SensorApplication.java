@@ -9,13 +9,13 @@ import javax.swing.border.TitledBorder;
 public class SensorApplication extends JFrame {
 
 	public SensorApplication() {
-        // Initialize sensors
+	    // Initialize sensors
 	    Sensor temp = new TemperatureSensorAdapter();
 	    Sensor pressure = new PressureSensorAdapter();
 	    Sensor radiation = new RadiationSensorAdapter();
 	    Sensor[] sensorList = {pressure, radiation, temp};
 
-        // Display readings and status bars for each sensor
+	    // Display readings and status bars for each sensor
 	    display(sensorList);
 	}
 
