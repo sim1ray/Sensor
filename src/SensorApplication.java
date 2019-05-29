@@ -9,7 +9,7 @@ import javax.swing.border.TitledBorder;
 public class SensorApplication extends JFrame {
 	
 	public SensorApplication() {
-	    // Initialize sensors
+        // Initialize sensors
         Sensor temp = new TemperatureSensorAdapter();
         Sensor press = new PressureSensorAdapter();
         Sensor rad = new RadiationSensorAdapter();
@@ -27,7 +27,7 @@ public class SensorApplication extends JFrame {
 	public void display(Sensor[] list) {
         setTitle("Sensor Tracker");
         setLayout(new GridLayout(3,1));
-        
+
         // Loop through list of sensors
         for (Sensor s : list) {
             JPanel pnl = new JPanel();
