@@ -28,7 +28,7 @@ public class SensorApplication extends JFrame {
         setTitle("Sensor Tracker");
         setLayout(new GridLayout(3,1));
         // Loop through list of sensors
-	    for (Sensor s : list) {
+	for (Sensor s : list) {
             JPanel pnl = new JPanel();
             pnl.setBorder(new TitledBorder(s.getName()));
             pnl.setLayout(new FlowLayout(FlowLayout.LEFT));
