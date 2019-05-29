@@ -17,7 +17,7 @@ public class SensorApplication extends JFrame {
 
         // Display readings and status bars for each sensor
         display(sensorList);
-    }
+	}
 
 	public static void main(String[] args) {
 	    SensorApplication app = new SensorApplication();
