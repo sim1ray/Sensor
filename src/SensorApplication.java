@@ -7,17 +7,17 @@ import javax.swing.*;
 import javax.swing.border.TitledBorder;
 
 public class SensorApplication extends JFrame {
-	
+
 	public SensorApplication() {
-        // Initialize sensors
+	    //Initialize sensors
         Sensor temp = new TemperatureSensorAdapter();
-        Sensor press = new PressureSensorAdapter();
-        Sensor rad = new RadiationSensorAdapter();
-        Sensor[] sensorList = {press, rad, temp};
+        Sensor pressure = new PressureSensorAdapter();
+        Sensor radiation = new RadiationSensorAdapter();
+        Sensor[] sensorList = {pressure, radiation, temp};
 
         // Display readings and status bars for each sensor
         display(sensorList);
-	}
+    }
 
 	public static void main(String[] args) {
 	    SensorApplication app = new SensorApplication();
