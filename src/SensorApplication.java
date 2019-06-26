@@ -43,16 +43,7 @@ public class SensorApplication extends JFrame {
             double val = s.getValue();
             String status = s.getStatus();
             int width = s.getStatusBarSize(val);
-            Color color;
-
-            // Set status colors
-            if (status.equals("OK")) {
-                color = Color.GREEN;
-            } else if (status.equals("DANGER")) {
-                color = Color.RED;
-            } else {
-                color = Color.YELLOW;
-            }
+            Color color = s.getStatusColor();
 
             // Add status bar of appropriate length
             JLabel statusColor = new JLabel();

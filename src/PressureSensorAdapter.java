@@ -4,7 +4,7 @@
 
 import sensor.PressureSensor;
 
-public class PressureSensorAdapter implements Sensor {
+public class PressureSensorAdapter extends Sensor {
     private PressureSensor ps;
 
     public PressureSensorAdapter(PressureSensor ps) {
@@ -35,4 +35,5 @@ public class PressureSensorAdapter implements Sensor {
     public String getUnit() {
         return "bar";
     }
+
 }

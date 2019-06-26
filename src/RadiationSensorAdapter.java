@@ -4,7 +4,7 @@
 
 import sensor.RadiationSensor;
 
-public class RadiationSensorAdapter implements Sensor {
+public class RadiationSensorAdapter extends Sensor {
     private RadiationSensor rs;
 
     public RadiationSensorAdapter(RadiationSensor rs) {

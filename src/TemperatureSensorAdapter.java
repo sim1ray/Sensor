@@ -4,7 +4,7 @@
 
 import sensor.TemperatureSensor;
 
-public class TemperatureSensorAdapter implements Sensor {
+public class TemperatureSensorAdapter extends Sensor {
     private TemperatureSensor ts;
 
     public TemperatureSensorAdapter(TemperatureSensor ts) {
@@ -35,4 +35,5 @@ public class TemperatureSensorAdapter implements Sensor {
     public String getUnit() {
         return "°C";
     }
+
 }
