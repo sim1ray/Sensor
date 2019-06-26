@@ -5,7 +5,11 @@
 import sensor.RadiationSensor;
 
 public class RadiationSensorAdapter implements Sensor {
-    RadiationSensor rs = new RadiationSensor();
+    private RadiationSensor rs;
+
+    public RadiationSensorAdapter(RadiationSensor rs) {
+        this.rs = rs;
+    }
 
     @Override
     public double getValue() {

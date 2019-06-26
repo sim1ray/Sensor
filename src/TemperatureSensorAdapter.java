@@ -5,7 +5,11 @@
 import sensor.TemperatureSensor;
 
 public class TemperatureSensorAdapter implements Sensor {
-    TemperatureSensor ts = new TemperatureSensor();
+    private TemperatureSensor ts;
+
+    public TemperatureSensorAdapter(TemperatureSensor ts) {
+        this.ts = ts;
+    }
 
     @Override
     public double getValue() {

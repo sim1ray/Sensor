@@ -5,7 +5,11 @@
 import sensor.PressureSensor;
 
 public class PressureSensorAdapter implements Sensor {
-    PressureSensor ps = new PressureSensor();
+    private PressureSensor ps;
+
+    public PressureSensorAdapter(PressureSensor ps) {
+        this.ps = ps;
+    }
 
     @Override
     public double getValue() {

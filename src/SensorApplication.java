@@ -2,6 +2,10 @@
  * GUI application that displays status bars and readings for temperature, pressure, and radiation sensors
  */
 
+import sensor.PressureSensor;
+import sensor.RadiationSensor;
+import sensor.TemperatureSensor;
+
 import java.awt.*;
 import javax.swing.*;
 import javax.swing.border.TitledBorder;
@@ -10,9 +14,9 @@ public class SensorApplication extends JFrame {
 
 	public SensorApplication() {
 	    // Initialize sensors
-	    Sensor temp = new TemperatureSensorAdapter();
-	    Sensor pressure = new PressureSensorAdapter();
-	    Sensor radiation = new RadiationSensorAdapter();
+	    Sensor temp = new TemperatureSensorAdapter(new TemperatureSensor());
+	    Sensor pressure = new PressureSensorAdapter(new PressureSensor());
+	    Sensor radiation = new RadiationSensorAdapter(new RadiationSensor());
 	    Sensor[] sensorList = {pressure, radiation, temp};
 
 	    // Display readings and status bars for each sensor
